@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema Nutrição</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<h1>Controle de Pacientes</h1>
+		</div>
+	</header>
+	<main>
+		<section class="container">
+			<h2>Meus pacientes</h2>
+			<input class="campo-filtro" type="text" name="filtro" placeholder="Pesquisar...">
+			<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Peso(kg)</th>
+						<th>Altura(m)</th>
+						<th>Gordura Corporal(%)</th>
+						<th>IMC</th>
+					</tr>
+				</thead>
+				<tbody id="tabela-pacientes">
+				</tbody>
+			</table>
+
+		</section>
+	</main>
+	<section class="container">
+		<h2 id="titulo-form">Adicionar novo paciente</h2>
+		<ul class="mensagem-erro">
+
+		</ul>
+		<form id="form-adiciona">
+			<div class="grupo">
+				<label for="nome">Nome:</label>
+				<input id="nome" name="nome" type="text" placeholder="Exemplo" class="campo"> 
+			</div>
+			<div class="grupo">
+				<label for="peso">Peso:</label>
+				<input id="peso" name="peso" type="text" placeholder="75 (max 1000)" 
+					class="campo campo-medio">
+			</div>
+			<div class="grupo">
+				<label for="altura">Altura:</label>
+				<input id="altura" name="altura" type="text" placeholder="1.75 (max 3.0)"
+					class="campo campo-medio">
+			</div>
+			<div class="grupo">
+				<label for="gordura">% de Gordura:</label>
+				<input id="gordura" type="text" placeholder="15 (max 100)"
+					class="campo campo-medio">
+			</div>
+
+			<button id="adicionar-paciente" class="botao botao__principal">Adicionar</button>
+		</form>
+	</section>
+	<script src="js/tabela-pacientes.js"></script>
+	<script src="js/adiciona-pacientes.js"></script>
+	<script src="js/remove-pacientes.js"></script>
+	<script src="js/filtra-pacientes.js"></script>
+</body>
+
+</html>
